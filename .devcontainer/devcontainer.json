@@ -1,0 +1,9 @@
+{
+  "name": "Calendar App Dev",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {
+    "ghcr.io/devcontainers/features/postgres:1": {}
+  },
+  "forwardPorts": [3000, 5000, 5432],
+  "postCreateCommand": "npm install"
+}
