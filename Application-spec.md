@@ -9,9 +9,8 @@ For the below Application specification, please create:
 3. High level system architecture diagram
 
 #Application specification-
-
 Application specification:
-This is an application that allows multiple users to share their personal calendars in view-only and view-and-edit modes.
+This is a *progressive web application* that allows multiple users to share their personal calendars in view-only and view-and-edit modes.
 To begin with each user is presented with a blank calendar for the current and next 3 calendar years.
 Users can update their calendars either by interactively adding events or by submitting an excel-sheet that has events listed for specific dates.Each user can keep their calendar private or share it with other users. 
 Each user can grant view or view-and-edit access to users they have shared their calendar with.
