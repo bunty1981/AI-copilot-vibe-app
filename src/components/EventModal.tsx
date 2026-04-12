@@ -21,8 +21,8 @@ const EventModal: React.FC<EventModalProps> = ({ date, event, onSave, onDelete, 
     if (event) {
       setName(event.name);
       setDetails(event.details || '');
-      setStartDate(event.date);
-      setEndDate(event.date); // For now, assume single day
+      setStartDate(event.startDate);
+      setEndDate(event.endDate);
     } else {
       setName('');
       setDetails('');
@@ -33,8 +33,16 @@ const EventModal: React.FC<EventModalProps> = ({ date, event, onSave, onDelete, 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate that end date is on or after start date
+    if (new Date(endDate) < new Date(startDate)) {
+      alert('End date must be on or after the start date');
+      return;
+    }
+    
     const eventData: Omit<Event, 'id'> = {
-      date: startDate,
+      startDate,
+      endDate,
       name,
       details: details || undefined,
       creator: 'User', // hardcoded
