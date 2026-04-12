@@ -4,7 +4,8 @@ import './App.css';
 
 export interface Event {
   id: string;
-  date: string; // ISO date string
+  startDate: string; // ISO date string
+  endDate: string; // ISO date string (must be >= startDate)
   name: string;
   details?: string;
   creator: string; // hardcoded to 'User' for now

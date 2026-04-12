@@ -14,10 +14,17 @@ npm install
 
 ### Start the app
 ```bash
-npm start
+npm run dev
 ```
 
 Open <http://localhost:3000> in your browser.
+
+### Development Commands
+- **Start dev server**: `npm run dev` (runs on port 3000)
+- **Build for production**: `npm run build`
+- **Lint code**: `npm run lint`
+- **Run tests**: `npm test`
+- **Preview build**: `npm run preview`
 
 ## 🐳 Docker / Codespaces (Recommended)
 
@@ -33,7 +40,9 @@ Then visit <http://localhost:3000>.
 ### Run in GitHub Codespaces
 1. Open the repository in GitHub Codespaces.
 2. The container will build automatically using `.devcontainer/devcontainer.json`.
-3. The app will start and should be accessible on port **3000**.
+3. Once ready, run `npm run dev` to start the development server.
+4. The app will be accessible on port **3000**.
+5. Use the same [Development Commands](#development-commands) listed above for testing, building, and linting.
 
 ## 🧩 Project Structure
 
